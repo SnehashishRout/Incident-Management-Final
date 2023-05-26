@@ -1,10 +1,10 @@
-package com.example.IncidentManagement.LowesApi;
+package com.example.IncidentManagement.IncidentManagementAPI;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class LowesApiApplicationTests {
+class IncidentManagementAPIApplicationTests {
 
 	@Test
 	void contextLoads() {

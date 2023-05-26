@@ -1,13 +1,13 @@
-package com.example.IncidentManagement.LowesApi;
+package com.usecase4.IncidentManagement;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class LowesApiApplication {
+public class IncidentManagementAPI {
 
 	public static void main(String[] args) {
-		SpringApplication.run(LowesApiApplication.class, args);
+		SpringApplication.run(IncidentManagementAPI.class, args);
 	}
 
 }

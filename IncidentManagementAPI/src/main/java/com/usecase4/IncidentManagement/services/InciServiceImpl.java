@@ -1,4 +1,4 @@
-package com.example.IncidentManagement.LowesApi.services;
+package com.usecase4.IncidentManagement.services;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,8 +7,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.IncidentManagement.LowesApi.dao.IncidentDao;
-import com.example.IncidentManagement.LowesApi.entity.Incident;
+import com.usecase4.IncidentManagement.dao.IncidentDao;
+import com.usecase4.IncidentManagement.entity.Incident;
 
 @Service
 public class InciServiceImpl implements InciService {
@@ -39,9 +39,8 @@ public class InciServiceImpl implements InciService {
 	@Override
 	public Incident createIncident(Incident inci) {
 
-		inciDao.save(inci);
+		return inciDao.save(inci);
 
-		return inci;
 	}
 
 	@Override

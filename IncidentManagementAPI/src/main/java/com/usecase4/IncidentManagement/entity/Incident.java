@@ -1,4 +1,4 @@
-package com.example.IncidentManagement.LowesApi.entity;
+package com.usecase4.IncidentManagement.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

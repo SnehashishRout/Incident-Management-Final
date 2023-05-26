@@ -1,4 +1,4 @@
-package com.example.IncidentManagement.LowesApi.controller;
+package com.usecase4.IncidentManagement.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.IncidentManagement.LowesApi.dao.IncidentDao;
-import com.example.IncidentManagement.LowesApi.entity.Incident;
-import com.example.IncidentManagement.LowesApi.services.InciService;
+import com.usecase4.IncidentManagement.dao.IncidentDao;
+import com.usecase4.IncidentManagement.entity.Incident;
+import com.usecase4.IncidentManagement.services.InciService;
 
 @RestController
 @CrossOrigin(origins = "*")
@@ -31,7 +31,6 @@ public class Controller {
 	
 	@GetMapping("/home")
 	public String home() {
-		
 		return "Welcome to course";
 	}
 	
@@ -43,7 +42,7 @@ public class Controller {
 	}
 	
 	@GetMapping("/incidents/{incidentId}")
-	public Optional<Incident> getIncident(@PathVariable String incidentId)
+	public Optional<Incident> getIncident(@PathVariable("incidentId") String incidentId)
 	{
 		return this.inciService.getincident(Long.parseLong(incidentId));
 	}
@@ -72,7 +71,7 @@ public class Controller {
 			this.inciService.deleteIncident(Long.parseLong(incidentId));
 			return new ResponseEntity<>(HttpStatus.OK);
 		} catch (Exception e) {
-			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		}
 	}
 } 
