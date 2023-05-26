@@ -1,9 +1,9 @@
-package com.example.IncidentManagement.LowesApi.services;
+package com.usecase4.IncidentManagement.services;
 
 import java.util.List;
 import java.util.Optional;
 
-import com.example.IncidentManagement.LowesApi.entity.Incident;
+import com.usecase4.IncidentManagement.entity.Incident;
 
 public interface InciService {
 	

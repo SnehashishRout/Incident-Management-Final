@@ -1,4 +1,4 @@
-package com.example.IncidentManagement.LowesApi.controller;
+package com.usecase4.IncidentManagement.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.IncidentManagement.LowesApi.dao.IncidentDao;
-import com.example.IncidentManagement.LowesApi.entity.Incident;
-import com.example.IncidentManagement.LowesApi.services.InciService;
+import com.usecase4.IncidentManagement.dao.IncidentDao;
+import com.usecase4.IncidentManagement.entity.Incident;
+import com.usecase4.IncidentManagement.services.InciService;
 
 @RestController
 @CrossOrigin(origins = "*")

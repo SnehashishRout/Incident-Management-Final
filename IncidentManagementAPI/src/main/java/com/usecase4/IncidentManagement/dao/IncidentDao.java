@@ -1,10 +1,10 @@
-package com.example.IncidentManagement.LowesApi.dao;
+package com.usecase4.IncidentManagement.dao;
 
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.example.IncidentManagement.LowesApi.entity.Incident;
+import com.usecase4.IncidentManagement.entity.Incident;
 
 public interface IncidentDao extends JpaRepository<Incident, Long> {
 	
