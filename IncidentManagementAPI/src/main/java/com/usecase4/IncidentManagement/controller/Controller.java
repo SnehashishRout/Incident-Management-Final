@@ -31,7 +31,6 @@ public class Controller {
 	
 	@GetMapping("/home")
 	public String home() {
-		
 		return "Welcome to course";
 	}
 	
@@ -43,7 +42,7 @@ public class Controller {
 	}
 	
 	@GetMapping("/incidents/{incidentId}")
-	public Optional<Incident> getIncident(@PathVariable String incidentId)
+	public Optional<Incident> getIncident(@PathVariable("incidentId") String incidentId)
 	{
 		return this.inciService.getincident(Long.parseLong(incidentId));
 	}
@@ -72,7 +71,7 @@ public class Controller {
 			this.inciService.deleteIncident(Long.parseLong(incidentId));
 			return new ResponseEntity<>(HttpStatus.OK);
 		} catch (Exception e) {
-			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		}
 	}
 } 

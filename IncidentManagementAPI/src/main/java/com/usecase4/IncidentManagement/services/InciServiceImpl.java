@@ -39,9 +39,8 @@ public class InciServiceImpl implements InciService {
 	@Override
 	public Incident createIncident(Incident inci) {
 
-		inciDao.save(inci);
+		return inciDao.save(inci);
 
-		return inci;
 	}
 
 	@Override
